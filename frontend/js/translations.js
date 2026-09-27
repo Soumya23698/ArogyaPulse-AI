@@ -28,7 +28,7 @@ const TRANSLATIONS = {
     kpi_oxygen: "Oxygen Supported Beds",
     kpi_icu: "ICU Ventilators Available",
     
-    filter_all_states: "All India (8 States)",
+    filter_all_states: "All India (36 States & UTs)",
     filter_all_types: "All Facilities (PHC, CHC, DH)",
     search_placeholder: "Search PHC by name, district, or PIN code...",
     
@@ -148,7 +148,7 @@ const TRANSLATIONS = {
     kpi_oxygen: "অক্সিজেন বেড প্রাপ্যতা",
     kpi_icu: "আইসিইউ ভেন্টিলেটর উপলব্ধ",
     
-    filter_all_states: "সমগ্র ভারত (৮টি রাজ্য)",
+    filter_all_states: "সমগ্র ভারত (৩৬টি রাজ্য ও কেন্দ্রশাসিত অঞ্চল)",
     btn_simulate_outbreak: "জরুরি মহামারী সিমুলেশন",
     btn_reset_baseline: "স্বাভাবিক অবস্থায় ফিরুন",
     btn_run_federated: "ফেডারেটেড রাউন্ড চালান",

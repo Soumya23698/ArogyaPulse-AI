@@ -30,7 +30,7 @@
     "total_active_alerts": 49,
     "active_emergency": null,
     "redistribution_dispatches_active": 0,
-    "timestamp": "2026-09-27T11:03:42.606969Z"
+    "timestamp": "2026-09-27T11:18:50.431503Z"
   },
   "states": [
     {
@@ -1019,7 +1019,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "AP-GUN-001",
           "facility_name": "PHC Mangalagiri",
-          "timestamp": "2026-09-27T10:52:28.193799Z"
+          "timestamp": "2026-09-27T11:18:17.571589Z"
         }
       ]
     },
@@ -2134,7 +2134,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "AR-PAP-001",
           "facility_name": "PHC Doimukh",
-          "timestamp": "2026-09-27T10:52:28.193827Z"
+          "timestamp": "2026-09-27T11:18:17.571640Z"
         }
       ]
     },
@@ -3249,7 +3249,7 @@
           "message": "Only 30 Sachets remaining (2.0 days runway at current burn rate 15/day). Immediate cross-district replenishment needed.",
           "facility_id": "AS-KAM-001",
           "facility_name": "PHC Hajo",
-          "timestamp": "2026-09-27T10:52:28.193848Z"
+          "timestamp": "2026-09-27T11:18:17.571678Z"
         },
         {
           "id": "ALT-AS-KAM-001-O2",
@@ -3259,7 +3259,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "AS-KAM-001",
           "facility_name": "PHC Hajo",
-          "timestamp": "2026-09-27T10:52:28.193853Z"
+          "timestamp": "2026-09-27T11:18:17.571688Z"
         }
       ]
     },
@@ -3638,7 +3638,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "AS-KAM-002",
           "facility_name": "PHC Sualkuchi",
-          "timestamp": "2026-09-27T10:52:28.193862Z"
+          "timestamp": "2026-09-27T11:18:17.571704Z"
         }
       ]
     },
@@ -4753,7 +4753,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "BR-PAT-001",
           "facility_name": "PHC Phulwari Sharif",
-          "timestamp": "2026-09-27T10:52:28.193880Z"
+          "timestamp": "2026-09-27T11:18:17.571737Z"
         }
       ]
     },
@@ -5132,7 +5132,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "BR-PAT-002",
           "facility_name": "PHC Maner",
-          "timestamp": "2026-09-27T10:52:28.193889Z"
+          "timestamp": "2026-09-27T11:18:17.571752Z"
         }
       ]
     },
@@ -6247,7 +6247,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "CG-RAI-001",
           "facility_name": "PHC Abhanpur",
-          "timestamp": "2026-09-27T10:52:28.193907Z"
+          "timestamp": "2026-09-27T11:18:17.571784Z"
         }
       ]
     },
@@ -7362,7 +7362,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "GA-NG-001",
           "facility_name": "PHC Aldona",
-          "timestamp": "2026-09-27T10:52:28.193926Z"
+          "timestamp": "2026-09-27T11:18:17.571816Z"
         }
       ]
     },
@@ -8477,7 +8477,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "GJ-GAN-001",
           "facility_name": "PHC Mansa",
-          "timestamp": "2026-09-27T10:52:28.193944Z"
+          "timestamp": "2026-09-27T11:18:17.571850Z"
         }
       ]
     },
@@ -9592,7 +9592,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "HR-GUR-001",
           "facility_name": "PHC Farrukhnagar",
-          "timestamp": "2026-09-27T10:52:28.193963Z"
+          "timestamp": "2026-09-27T11:18:17.571883Z"
         }
       ]
     },
@@ -10707,7 +10707,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "HP-SHI-001",
           "facility_name": "PHC Mashobra",
-          "timestamp": "2026-09-27T10:52:28.193981Z"
+          "timestamp": "2026-09-27T11:18:17.571920Z"
         }
       ]
     },
@@ -11822,7 +11822,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "JH-RAN-001",
           "facility_name": "PHC Kanke",
-          "timestamp": "2026-09-27T10:52:28.194000Z"
+          "timestamp": "2026-09-27T11:18:17.571952Z"
         }
       ]
     },
@@ -12937,7 +12937,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "KA-BLR-001",
           "facility_name": "UPHC Malleshwaram",
-          "timestamp": "2026-09-27T10:52:28.194018Z"
+          "timestamp": "2026-09-27T11:18:17.571986Z"
         }
       ]
     },
@@ -14052,7 +14052,7 @@
           "message": "Only 11 Cassette Tests remaining (2.2 days runway at current burn rate 5/day). Immediate cross-district replenishment needed.",
           "facility_id": "KL-EKM-001",
           "facility_name": "PHC Cheranalloor (FHC)",
-          "timestamp": "2026-09-27T10:52:28.194038Z"
+          "timestamp": "2026-09-27T11:18:17.572020Z"
         },
         {
           "id": "ALT-KL-EKM-001-O2",
@@ -14062,7 +14062,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "KL-EKM-001",
           "facility_name": "PHC Cheranalloor (FHC)",
-          "timestamp": "2026-09-27T10:52:28.194042Z"
+          "timestamp": "2026-09-27T11:18:17.572027Z"
         }
       ]
     },
@@ -14441,7 +14441,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "KL-EKM-002",
           "facility_name": "PHC Mulavukad",
-          "timestamp": "2026-09-27T10:52:28.194051Z"
+          "timestamp": "2026-09-27T11:18:17.572042Z"
         }
       ]
     },
@@ -15924,7 +15924,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "MP-BHO-001",
           "facility_name": "PHC Berasia",
-          "timestamp": "2026-09-27T10:52:28.194074Z"
+          "timestamp": "2026-09-27T11:18:17.572085Z"
         }
       ]
     },
@@ -17039,7 +17039,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "MH-PUN-001",
           "facility_name": "PHC Wagholi",
-          "timestamp": "2026-09-27T10:52:28.194093Z"
+          "timestamp": "2026-09-27T11:18:17.572119Z"
         }
       ]
     },
@@ -17418,7 +17418,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "MH-PUN-002",
           "facility_name": "PHC Uruli Kanchan",
-          "timestamp": "2026-09-27T10:52:28.194100Z"
+          "timestamp": "2026-09-27T11:18:17.572380Z"
         }
       ]
     },
@@ -18901,7 +18901,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "MN-IMP-001",
           "facility_name": "PHC Sawombung",
-          "timestamp": "2026-09-27T10:52:28.194123Z"
+          "timestamp": "2026-09-27T11:18:17.572452Z"
         }
       ]
     },
@@ -20016,7 +20016,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "ML-EKH-001",
           "facility_name": "PHC Mawphlang",
-          "timestamp": "2026-09-27T10:52:28.194141Z"
+          "timestamp": "2026-09-27T11:18:17.572488Z"
         }
       ]
     },
@@ -21131,7 +21131,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "MZ-AIZ-001",
           "facility_name": "PHC Darlawn",
-          "timestamp": "2026-09-27T10:52:28.194160Z"
+          "timestamp": "2026-09-27T11:18:17.572524Z"
         }
       ]
     },
@@ -22246,7 +22246,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "NL-KOH-001",
           "facility_name": "PHC Jakhama",
-          "timestamp": "2026-09-27T10:52:28.194178Z"
+          "timestamp": "2026-09-27T11:18:17.572558Z"
         }
       ]
     },
@@ -23361,7 +23361,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "OD-KHO-001",
           "facility_name": "PHC Balianta",
-          "timestamp": "2026-09-27T10:52:28.194196Z"
+          "timestamp": "2026-09-27T11:18:17.572591Z"
         }
       ]
     },
@@ -23740,7 +23740,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "OD-KHO-002",
           "facility_name": "PHC Jatni",
-          "timestamp": "2026-09-27T10:52:28.194204Z"
+          "timestamp": "2026-09-27T11:18:17.572606Z"
         }
       ]
     },
@@ -25223,7 +25223,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "PB-SAS-001",
           "facility_name": "PHC Majri",
-          "timestamp": "2026-09-27T10:52:28.194227Z"
+          "timestamp": "2026-09-27T11:18:17.572650Z"
         }
       ]
     },
@@ -26338,7 +26338,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "RJ-JAI-001",
           "facility_name": "PHC Bassi",
-          "timestamp": "2026-09-27T10:52:28.194245Z"
+          "timestamp": "2026-09-27T11:18:17.572683Z"
         }
       ]
     },
@@ -26717,7 +26717,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "RJ-JAI-002",
           "facility_name": "PHC Chaksu",
-          "timestamp": "2026-09-27T10:52:28.194254Z"
+          "timestamp": "2026-09-27T11:18:17.572698Z"
         }
       ]
     },
@@ -28200,7 +28200,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "SK-ES-001",
           "facility_name": "PHC Singtam",
-          "timestamp": "2026-09-27T10:52:28.194277Z"
+          "timestamp": "2026-09-27T11:18:17.572741Z"
         }
       ]
     },
@@ -29315,7 +29315,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "TN-MAD-001",
           "facility_name": "PHC Alanganallur",
-          "timestamp": "2026-09-27T10:52:28.194296Z"
+          "timestamp": "2026-09-27T11:18:17.572775Z"
         }
       ]
     },
@@ -29694,7 +29694,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "TN-MAD-002",
           "facility_name": "PHC Samayanallur",
-          "timestamp": "2026-09-27T10:52:28.194304Z"
+          "timestamp": "2026-09-27T11:18:17.572798Z"
         }
       ]
     },
@@ -31177,7 +31177,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "TG-HYD-001",
           "facility_name": "UPHC Golconda",
-          "timestamp": "2026-09-27T10:52:28.194328Z"
+          "timestamp": "2026-09-27T11:18:17.572845Z"
         }
       ]
     },
@@ -32292,7 +32292,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "TR-WT-001",
           "facility_name": "PHC Ranirbazar",
-          "timestamp": "2026-09-27T10:52:28.194346Z"
+          "timestamp": "2026-09-27T11:18:17.572878Z"
         }
       ]
     },
@@ -33407,7 +33407,7 @@
           "message": "Only 1 Vials (10ml) remaining (1.0 days runway at current burn rate 1/day). Immediate cross-district replenishment needed.",
           "facility_id": "UP-VAR-001",
           "facility_name": "PHC Cholapur",
-          "timestamp": "2026-09-27T10:52:28.194364Z"
+          "timestamp": "2026-09-27T11:18:17.572914Z"
         },
         {
           "id": "ALT-UP-VAR-001-O2",
@@ -33417,7 +33417,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "UP-VAR-001",
           "facility_name": "PHC Cholapur",
-          "timestamp": "2026-09-27T10:52:28.194369Z"
+          "timestamp": "2026-09-27T11:18:17.572923Z"
         }
       ]
     },
@@ -33796,7 +33796,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "UP-VAR-002",
           "facility_name": "PHC Harhua",
-          "timestamp": "2026-09-27T10:52:28.194377Z"
+          "timestamp": "2026-09-27T11:18:17.572938Z"
         }
       ]
     },
@@ -35647,7 +35647,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "UK-DEH-001",
           "facility_name": "PHC Sahaspur",
-          "timestamp": "2026-09-27T10:52:28.194407Z"
+          "timestamp": "2026-09-27T11:18:17.572991Z"
         }
       ]
     },
@@ -36762,7 +36762,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "WB-S24-001",
           "facility_name": "PHC Basanti",
-          "timestamp": "2026-09-27T10:52:28.194426Z"
+          "timestamp": "2026-09-27T11:18:17.573024Z"
         }
       ]
     },
@@ -37141,7 +37141,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "WB-S24-002",
           "facility_name": "PHC Gosaba",
-          "timestamp": "2026-09-27T10:52:28.194434Z"
+          "timestamp": "2026-09-27T11:18:17.573039Z"
         }
       ]
     },
@@ -38624,7 +38624,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "AN-SA-001",
           "facility_name": "PHC Ferrargunj",
-          "timestamp": "2026-09-27T10:52:28.194458Z"
+          "timestamp": "2026-09-27T11:18:17.573082Z"
         }
       ]
     },
@@ -39739,7 +39739,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "CH-CHD-001",
           "facility_name": "HWC / UPHC Sector 22",
-          "timestamp": "2026-09-27T10:52:28.194477Z"
+          "timestamp": "2026-09-27T11:18:17.573117Z"
         }
       ]
     },
@@ -40854,7 +40854,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "DN-DNH-001",
           "facility_name": "PHC Naroli",
-          "timestamp": "2026-09-27T10:52:28.194496Z"
+          "timestamp": "2026-09-27T11:18:17.573151Z"
         }
       ]
     },
@@ -41969,7 +41969,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "DL-CEN-001",
           "facility_name": "UPHC Chandni Chowk",
-          "timestamp": "2026-09-27T10:52:28.194515Z"
+          "timestamp": "2026-09-27T11:18:17.573186Z"
         }
       ]
     },
@@ -43084,7 +43084,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "DL-SW-001",
           "facility_name": "UPHC Najafgarh Rural Training Unit",
-          "timestamp": "2026-09-27T10:52:28.194534Z"
+          "timestamp": "2026-09-27T11:18:17.573220Z"
         }
       ]
     },
@@ -43463,7 +43463,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "JK-SRI-001",
           "facility_name": "PHC Hazratbal",
-          "timestamp": "2026-09-27T10:52:28.194542Z"
+          "timestamp": "2026-09-27T11:18:17.573235Z"
         }
       ]
     },
@@ -44946,7 +44946,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "LA-LEH-001",
           "facility_name": "PHC Chushot",
-          "timestamp": "2026-09-27T10:52:28.194566Z"
+          "timestamp": "2026-09-27T11:18:17.573278Z"
         }
       ]
     },
@@ -46061,7 +46061,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "LD-KAV-001",
           "facility_name": "PHC Agatti Island",
-          "timestamp": "2026-09-27T10:52:28.194583Z"
+          "timestamp": "2026-09-27T11:18:17.573315Z"
         }
       ]
     },
@@ -47176,7 +47176,7 @@
           "message": "Only 1 of 2 oxygen beds available.",
           "facility_id": "PY-PUD-001",
           "facility_name": "PHC Villianur",
-          "timestamp": "2026-09-27T10:52:28.194601Z"
+          "timestamp": "2026-09-27T11:18:17.573348Z"
         }
       ]
     },
@@ -47959,11 +47959,11 @@
         "est_transit_hours": 1.1,
         "recommended_carrier": "District Health Rapid Dispatch Vehicle",
         "temperature_protocol": "Ambient (Below 25\u00b0C)",
-        "gate_pass_code": "GP-AS-75970"
+        "gate_pass_code": "GP-AS-63841"
       },
       "rationale": "Selected CHC Rangia (CHC) as optimal donor based on distance (26.6 km), surplus buffer (1275 Sachets), and post-transfer donor stability (18.8 days runway remaining). Standard pharmaceutical transport container.",
       "status": "RECOMMENDED",
-      "created_at": "2026-09-27T11:03:42.607521Z"
+      "created_at": "2026-09-27T11:18:50.432049Z"
     },
     {
       "id": "TRX-KL-0002",
@@ -48006,11 +48006,11 @@
         "est_transit_hours": 0.7,
         "recommended_carrier": "District Health Rapid Dispatch Vehicle",
         "temperature_protocol": "Ambient (Below 25\u00b0C)",
-        "gate_pass_code": "GP-KL-83308"
+        "gate_pass_code": "GP-KL-62270"
       },
       "rationale": "Selected General Hospital Ernakulam (DH) as optimal donor based on distance (9.1 km), surplus buffer (993 Cassette Tests), and post-transfer donor stability (27.0 days runway remaining). Standard pharmaceutical transport container.",
       "status": "RECOMMENDED",
-      "created_at": "2026-09-27T11:03:42.607845Z"
+      "created_at": "2026-09-27T11:18:50.432608Z"
     },
     {
       "id": "TRX-UP-0003",
@@ -48053,31 +48053,31 @@
         "est_transit_hours": 1.0,
         "recommended_carrier": "Refrigerated EV Van",
         "temperature_protocol": "2\u00b0C to 8\u00b0C Monitored",
-        "gate_pass_code": "GP-UP-24008"
+        "gate_pass_code": "GP-UP-67618"
       },
       "rationale": "Selected Pt. Deen Dayal Upadhyaya District Hospital (DH) as optimal donor based on distance (11.5 km), surplus buffer (18 Vials (10ml)), and post-transfer donor stability (12.0 days runway remaining). Requires ILR/Vaccine cold-box maintain 2-8\u00b0C with digital data logger.",
       "status": "RECOMMENDED",
-      "created_at": "2026-09-27T11:03:42.608060Z"
+      "created_at": "2026-09-27T11:18:50.432989Z"
     }
   ],
   "federated_status": {
-    "total_rounds_completed": 4,
+    "total_rounds_completed": 5,
     "latest_round": {
-      "round_number": 4,
-      "timestamp": "2026-09-27T10:52:11.221942Z",
-      "global_loss": 0.3579,
-      "global_accuracy": 86.46,
+      "round_number": 5,
+      "timestamp": "2026-09-27T11:18:01.197927Z",
+      "global_loss": 0.3389,
+      "global_accuracy": 87.6,
       "differential_privacy_epsilon": 1.25,
       "differential_privacy_delta": "1e-5",
-      "total_raw_records_protected": 2183878,
-      "gradient_payload_transferred_kb": 48.6,
+      "total_raw_records_protected": 2309284,
+      "gradient_payload_transferred_kb": 50.1,
       "state_contributions": [
         {
           "state_code": "AP",
           "state_name": "Andhra Pradesh",
           "local_samples": 111720,
-          "local_loss": 0.396,
-          "local_accuracy": 85.3,
+          "local_loss": 0.332,
+          "local_accuracy": 87.3,
           "weight_fraction": 0.04,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48087,8 +48087,8 @@
           "state_code": "AR",
           "state_name": "Arunachal Pradesh",
           "local_samples": 3360,
-          "local_loss": 0.362,
-          "local_accuracy": 86.4,
+          "local_loss": 0.337,
+          "local_accuracy": 88.9,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48098,8 +48098,8 @@
           "state_code": "AS",
           "state_name": "Assam",
           "local_samples": 76650,
-          "local_loss": 0.361,
-          "local_accuracy": 86.1,
+          "local_loss": 0.338,
+          "local_accuracy": 87.3,
           "weight_fraction": 0.03,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48109,8 +48109,8 @@
           "state_code": "BR",
           "state_name": "Bihar",
           "local_samples": 268800,
-          "local_loss": 0.343,
-          "local_accuracy": 85.7,
+          "local_loss": 0.371,
+          "local_accuracy": 87.7,
           "weight_fraction": 0.09,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48120,8 +48120,8 @@
           "state_code": "CG",
           "state_name": "Chhattisgarh",
           "local_samples": 63210,
-          "local_loss": 0.377,
-          "local_accuracy": 87.3,
+          "local_loss": 0.363,
+          "local_accuracy": 86.2,
           "weight_fraction": 0.02,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48131,8 +48131,8 @@
           "state_code": "GA",
           "state_name": "Goa",
           "local_samples": 3150,
-          "local_loss": 0.36,
-          "local_accuracy": 88.2,
+          "local_loss": 0.327,
+          "local_accuracy": 86.9,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48142,8 +48142,8 @@
           "state_code": "GJ",
           "state_name": "Gujarat",
           "local_samples": 150150,
-          "local_loss": 0.336,
-          "local_accuracy": 87.7,
+          "local_loss": 0.328,
+          "local_accuracy": 88.3,
           "weight_fraction": 0.05,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48153,8 +48153,8 @@
           "state_code": "HR",
           "state_name": "Haryana",
           "local_samples": 59220,
-          "local_loss": 0.345,
-          "local_accuracy": 86.6,
+          "local_loss": 0.346,
+          "local_accuracy": 88.1,
           "weight_fraction": 0.02,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48164,8 +48164,8 @@
           "state_code": "HP",
           "state_name": "Himachal Pradesh",
           "local_samples": 15540,
-          "local_loss": 0.36,
-          "local_accuracy": 87.3,
+          "local_loss": 0.375,
+          "local_accuracy": 89.1,
           "weight_fraction": 0.01,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48175,8 +48175,8 @@
           "state_code": "JH",
           "state_name": "Jharkhand",
           "local_samples": 82740,
-          "local_loss": 0.384,
-          "local_accuracy": 87.7,
+          "local_loss": 0.375,
+          "local_accuracy": 87.9,
           "weight_fraction": 0.03,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48186,8 +48186,8 @@
           "state_code": "KA",
           "state_name": "Karnataka",
           "local_samples": 142380,
-          "local_loss": 0.387,
-          "local_accuracy": 86.3,
+          "local_loss": 0.371,
+          "local_accuracy": 88.2,
           "weight_fraction": 0.05,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48197,8 +48197,8 @@
           "state_code": "KL",
           "state_name": "Kerala",
           "local_samples": 75180,
-          "local_loss": 0.33,
-          "local_accuracy": 88.3,
+          "local_loss": 0.317,
+          "local_accuracy": 87.9,
           "weight_fraction": 0.03,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48208,8 +48208,8 @@
           "state_code": "MP",
           "state_name": "Madhya Pradesh",
           "local_samples": 179550,
-          "local_loss": 0.334,
-          "local_accuracy": 86.2,
+          "local_loss": 0.357,
+          "local_accuracy": 86.7,
           "weight_fraction": 0.06,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48219,8 +48219,8 @@
           "state_code": "MH",
           "state_name": "Maharashtra",
           "local_samples": 264600,
-          "local_loss": 0.369,
-          "local_accuracy": 85.5,
+          "local_loss": 0.322,
+          "local_accuracy": 86.2,
           "weight_fraction": 0.09,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48230,8 +48230,8 @@
           "state_code": "MN",
           "state_name": "Manipur",
           "local_samples": 6720,
-          "local_loss": 0.379,
-          "local_accuracy": 85.2,
+          "local_loss": 0.328,
+          "local_accuracy": 88.4,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48241,8 +48241,8 @@
           "state_code": "ML",
           "state_name": "Meghalaya",
           "local_samples": 7140,
-          "local_loss": 0.385,
-          "local_accuracy": 87.5,
+          "local_loss": 0.322,
+          "local_accuracy": 89.3,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48252,8 +48252,8 @@
           "state_code": "MZ",
           "state_name": "Mizoram",
           "local_samples": 2520,
-          "local_loss": 0.353,
-          "local_accuracy": 87.5,
+          "local_loss": 0.349,
+          "local_accuracy": 87.2,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48263,8 +48263,8 @@
           "state_code": "NL",
           "state_name": "Nagaland",
           "local_samples": 4620,
-          "local_loss": 0.346,
-          "local_accuracy": 85.9,
+          "local_loss": 0.32,
+          "local_accuracy": 88.0,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48274,8 +48274,8 @@
           "state_code": "OD",
           "state_name": "Odisha",
           "local_samples": 97020,
-          "local_loss": 0.385,
-          "local_accuracy": 85.1,
+          "local_loss": 0.32,
+          "local_accuracy": 86.5,
           "weight_fraction": 0.03,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48285,8 +48285,8 @@
           "state_code": "PB",
           "state_name": "Punjab",
           "local_samples": 64470,
-          "local_loss": 0.38,
-          "local_accuracy": 85.0,
+          "local_loss": 0.338,
+          "local_accuracy": 86.6,
           "weight_fraction": 0.02,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48296,8 +48296,8 @@
           "state_code": "RJ",
           "state_name": "Rajasthan",
           "local_samples": 170100,
-          "local_loss": 0.339,
-          "local_accuracy": 86.8,
+          "local_loss": 0.371,
+          "local_accuracy": 88.7,
           "weight_fraction": 0.06,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48307,8 +48307,8 @@
           "state_code": "SK",
           "state_name": "Sikkim",
           "local_samples": 1470,
-          "local_loss": 0.36,
-          "local_accuracy": 87.5,
+          "local_loss": 0.362,
+          "local_accuracy": 86.3,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48318,8 +48318,8 @@
           "state_code": "TN",
           "state_name": "Tamil Nadu",
           "local_samples": 161490,
-          "local_loss": 0.388,
-          "local_accuracy": 88.0,
+          "local_loss": 0.346,
+          "local_accuracy": 87.4,
           "weight_fraction": 0.06,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48329,8 +48329,8 @@
           "state_code": "TG",
           "state_name": "Telangana",
           "local_samples": 79800,
-          "local_loss": 0.338,
-          "local_accuracy": 87.3,
+          "local_loss": 0.374,
+          "local_accuracy": 88.7,
           "weight_fraction": 0.03,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48340,8 +48340,8 @@
           "state_code": "TR",
           "state_name": "Tripura",
           "local_samples": 8610,
-          "local_loss": 0.347,
-          "local_accuracy": 86.2,
+          "local_loss": 0.342,
+          "local_accuracy": 86.7,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48351,8 +48351,8 @@
           "state_code": "UP",
           "state_name": "Uttar Pradesh",
           "local_samples": 506100,
-          "local_loss": 0.341,
-          "local_accuracy": 88.3,
+          "local_loss": 0.36,
+          "local_accuracy": 86.2,
           "weight_fraction": 0.17,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48362,8 +48362,8 @@
           "state_code": "UK",
           "state_name": "Uttarakhand",
           "local_samples": 24150,
-          "local_loss": 0.358,
-          "local_accuracy": 87.7,
+          "local_loss": 0.33,
+          "local_accuracy": 86.3,
           "weight_fraction": 0.01,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48373,8 +48373,8 @@
           "state_code": "WB",
           "state_name": "West Bengal",
           "local_samples": 208110,
-          "local_loss": 0.341,
-          "local_accuracy": 87.9,
+          "local_loss": 0.361,
+          "local_accuracy": 89.4,
           "weight_fraction": 0.07,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48384,8 +48384,8 @@
           "state_code": "AN",
           "state_name": "Andaman and Nicobar Islands",
           "local_samples": 840,
-          "local_loss": 0.382,
-          "local_accuracy": 86.3,
+          "local_loss": 0.358,
+          "local_accuracy": 86.5,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48395,8 +48395,8 @@
           "state_code": "CH",
           "state_name": "Chandigarh",
           "local_samples": 2520,
-          "local_loss": 0.345,
-          "local_accuracy": 86.0,
+          "local_loss": 0.341,
+          "local_accuracy": 89.2,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48406,8 +48406,8 @@
           "state_code": "DN",
           "state_name": "Dadra and Nagar Haveli and Daman and Diu",
           "local_samples": 1260,
-          "local_loss": 0.34,
-          "local_accuracy": 86.2,
+          "local_loss": 0.356,
+          "local_accuracy": 87.4,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48417,8 +48417,8 @@
           "state_code": "DL",
           "state_name": "Delhi",
           "local_samples": 43680,
-          "local_loss": 0.342,
-          "local_accuracy": 85.8,
+          "local_loss": 0.362,
+          "local_accuracy": 88.3,
           "weight_fraction": 0.01,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48428,8 +48428,8 @@
           "state_code": "JK",
           "state_name": "Jammu and Kashmir",
           "local_samples": 28560,
-          "local_loss": 0.37,
-          "local_accuracy": 87.8,
+          "local_loss": 0.337,
+          "local_accuracy": 87.3,
           "weight_fraction": 0.01,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48439,8 +48439,8 @@
           "state_code": "LA",
           "state_name": "Ladakh",
           "local_samples": 630,
-          "local_loss": 0.354,
-          "local_accuracy": 86.9,
+          "local_loss": 0.36,
+          "local_accuracy": 86.4,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48450,8 +48450,8 @@
           "state_code": "LD",
           "state_name": "Lakshadweep",
           "local_samples": 147,
-          "local_loss": 0.345,
-          "local_accuracy": 88.0,
+          "local_loss": 0.338,
+          "local_accuracy": 86.6,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48461,8 +48461,8 @@
           "state_code": "PY",
           "state_name": "Puducherry",
           "local_samples": 2940,
-          "local_loss": 0.39,
-          "local_accuracy": 88.2,
+          "local_loss": 0.346,
+          "local_accuracy": 88.1,
           "weight_fraction": 0.0,
           "status": "CONVERGED_GRADIENT_AGGREGATED",
           "local_epochs": 5,
@@ -48471,9 +48471,9 @@
       ],
       "algorithm": "Federated Averaging (FedAvg) + Adaptive Gradient Clipping + Renyi DP",
       "learned_features": [
-        "Round 4: Global cross-district redistribution latency reduced by 14.2% through learned transit weight matrices."
+        "Round 5: Enhanced precision on Anti-Snake Venom (ASV) consumption in UP & Maharashtra rural farming belts."
       ],
-      "convergence_percentage": 89.2
+      "convergence_percentage": 99.0
     },
     "history": [
       {
@@ -49496,6 +49496,419 @@
           "Round 4: Global cross-district redistribution latency reduced by 14.2% through learned transit weight matrices."
         ],
         "convergence_percentage": 89.2
+      },
+      {
+        "round_number": 5,
+        "timestamp": "2026-09-27T11:18:01.197927Z",
+        "global_loss": 0.3389,
+        "global_accuracy": 87.6,
+        "differential_privacy_epsilon": 1.25,
+        "differential_privacy_delta": "1e-5",
+        "total_raw_records_protected": 2309284,
+        "gradient_payload_transferred_kb": 50.1,
+        "state_contributions": [
+          {
+            "state_code": "AP",
+            "state_name": "Andhra Pradesh",
+            "local_samples": 111720,
+            "local_loss": 0.332,
+            "local_accuracy": 87.3,
+            "weight_fraction": 0.04,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "AR",
+            "state_name": "Arunachal Pradesh",
+            "local_samples": 3360,
+            "local_loss": 0.337,
+            "local_accuracy": 88.9,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "AS",
+            "state_name": "Assam",
+            "local_samples": 76650,
+            "local_loss": 0.338,
+            "local_accuracy": 87.3,
+            "weight_fraction": 0.03,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "BR",
+            "state_name": "Bihar",
+            "local_samples": 268800,
+            "local_loss": 0.371,
+            "local_accuracy": 87.7,
+            "weight_fraction": 0.09,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "CG",
+            "state_name": "Chhattisgarh",
+            "local_samples": 63210,
+            "local_loss": 0.363,
+            "local_accuracy": 86.2,
+            "weight_fraction": 0.02,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "GA",
+            "state_name": "Goa",
+            "local_samples": 3150,
+            "local_loss": 0.327,
+            "local_accuracy": 86.9,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "GJ",
+            "state_name": "Gujarat",
+            "local_samples": 150150,
+            "local_loss": 0.328,
+            "local_accuracy": 88.3,
+            "weight_fraction": 0.05,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "HR",
+            "state_name": "Haryana",
+            "local_samples": 59220,
+            "local_loss": 0.346,
+            "local_accuracy": 88.1,
+            "weight_fraction": 0.02,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "HP",
+            "state_name": "Himachal Pradesh",
+            "local_samples": 15540,
+            "local_loss": 0.375,
+            "local_accuracy": 89.1,
+            "weight_fraction": 0.01,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "JH",
+            "state_name": "Jharkhand",
+            "local_samples": 82740,
+            "local_loss": 0.375,
+            "local_accuracy": 87.9,
+            "weight_fraction": 0.03,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "KA",
+            "state_name": "Karnataka",
+            "local_samples": 142380,
+            "local_loss": 0.371,
+            "local_accuracy": 88.2,
+            "weight_fraction": 0.05,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "KL",
+            "state_name": "Kerala",
+            "local_samples": 75180,
+            "local_loss": 0.317,
+            "local_accuracy": 87.9,
+            "weight_fraction": 0.03,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "MP",
+            "state_name": "Madhya Pradesh",
+            "local_samples": 179550,
+            "local_loss": 0.357,
+            "local_accuracy": 86.7,
+            "weight_fraction": 0.06,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "MH",
+            "state_name": "Maharashtra",
+            "local_samples": 264600,
+            "local_loss": 0.322,
+            "local_accuracy": 86.2,
+            "weight_fraction": 0.09,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "MN",
+            "state_name": "Manipur",
+            "local_samples": 6720,
+            "local_loss": 0.328,
+            "local_accuracy": 88.4,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "ML",
+            "state_name": "Meghalaya",
+            "local_samples": 7140,
+            "local_loss": 0.322,
+            "local_accuracy": 89.3,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "MZ",
+            "state_name": "Mizoram",
+            "local_samples": 2520,
+            "local_loss": 0.349,
+            "local_accuracy": 87.2,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "NL",
+            "state_name": "Nagaland",
+            "local_samples": 4620,
+            "local_loss": 0.32,
+            "local_accuracy": 88.0,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "OD",
+            "state_name": "Odisha",
+            "local_samples": 97020,
+            "local_loss": 0.32,
+            "local_accuracy": 86.5,
+            "weight_fraction": 0.03,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "PB",
+            "state_name": "Punjab",
+            "local_samples": 64470,
+            "local_loss": 0.338,
+            "local_accuracy": 86.6,
+            "weight_fraction": 0.02,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "RJ",
+            "state_name": "Rajasthan",
+            "local_samples": 170100,
+            "local_loss": 0.371,
+            "local_accuracy": 88.7,
+            "weight_fraction": 0.06,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "SK",
+            "state_name": "Sikkim",
+            "local_samples": 1470,
+            "local_loss": 0.362,
+            "local_accuracy": 86.3,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "TN",
+            "state_name": "Tamil Nadu",
+            "local_samples": 161490,
+            "local_loss": 0.346,
+            "local_accuracy": 87.4,
+            "weight_fraction": 0.06,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "TG",
+            "state_name": "Telangana",
+            "local_samples": 79800,
+            "local_loss": 0.374,
+            "local_accuracy": 88.7,
+            "weight_fraction": 0.03,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "TR",
+            "state_name": "Tripura",
+            "local_samples": 8610,
+            "local_loss": 0.342,
+            "local_accuracy": 86.7,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "UP",
+            "state_name": "Uttar Pradesh",
+            "local_samples": 506100,
+            "local_loss": 0.36,
+            "local_accuracy": 86.2,
+            "weight_fraction": 0.17,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "UK",
+            "state_name": "Uttarakhand",
+            "local_samples": 24150,
+            "local_loss": 0.33,
+            "local_accuracy": 86.3,
+            "weight_fraction": 0.01,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "WB",
+            "state_name": "West Bengal",
+            "local_samples": 208110,
+            "local_loss": 0.361,
+            "local_accuracy": 89.4,
+            "weight_fraction": 0.07,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "AN",
+            "state_name": "Andaman and Nicobar Islands",
+            "local_samples": 840,
+            "local_loss": 0.358,
+            "local_accuracy": 86.5,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "CH",
+            "state_name": "Chandigarh",
+            "local_samples": 2520,
+            "local_loss": 0.341,
+            "local_accuracy": 89.2,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "DN",
+            "state_name": "Dadra and Nagar Haveli and Daman and Diu",
+            "local_samples": 1260,
+            "local_loss": 0.356,
+            "local_accuracy": 87.4,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "DL",
+            "state_name": "Delhi",
+            "local_samples": 43680,
+            "local_loss": 0.362,
+            "local_accuracy": 88.3,
+            "weight_fraction": 0.01,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "JK",
+            "state_name": "Jammu and Kashmir",
+            "local_samples": 28560,
+            "local_loss": 0.337,
+            "local_accuracy": 87.3,
+            "weight_fraction": 0.01,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "LA",
+            "state_name": "Ladakh",
+            "local_samples": 630,
+            "local_loss": 0.36,
+            "local_accuracy": 86.4,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "LD",
+            "state_name": "Lakshadweep",
+            "local_samples": 147,
+            "local_loss": 0.338,
+            "local_accuracy": 86.6,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          },
+          {
+            "state_code": "PY",
+            "state_name": "Puducherry",
+            "local_samples": 2940,
+            "local_loss": 0.346,
+            "local_accuracy": 88.1,
+            "weight_fraction": 0.0,
+            "status": "CONVERGED_GRADIENT_AGGREGATED",
+            "local_epochs": 5,
+            "differential_privacy_clip_norm": 1.0
+          }
+        ],
+        "algorithm": "Federated Averaging (FedAvg) + Adaptive Gradient Clipping + Renyi DP",
+        "learned_features": [
+          "Round 5: Enhanced precision on Anti-Snake Venom (ASV) consumption in UP & Maharashtra rural farming belts."
+        ],
+        "convergence_percentage": 99.0
       }
     ],
     "connected_state_nodes": 36,
