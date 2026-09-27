@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArogyaPulse AI - National Federated Health Resource & Supply Chain Intelligence Grid</title>
+  <link rel="icon" href="/logo.png" type="image/png">
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans & Noto Sans Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Leaflet.js CSS (Local with CDN fallback) -->
+  <link rel="stylesheet" href="/css/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Dependencies: Local Leaflet, Chart.js, Marked -->
+  <script src="/js/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- NATIONAL EMBLEM & TRICOLOR TOP STRIP -->
+  <header class="national-header">
+    <div class="top-flag-strip"></div>
+    <div class="header-container">
+      <div class="brand-wrapper">
+        <a href="#tab-overview" onclick="window.switchTab('tab-overview')" class="main-header-logo-link" title="ArogyaPulse AI - National Health Resource Grid">
+          <img src="/logo.png" alt="ArogyaPulse AI" class="main-header-logo">
+        </a>
+        <div class="brand-meta-wrapper">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span class="brand-tag">राष्ट्रीय ग्रिड</span>
+            <span style="font-size:11px; color:#0284c7; font-weight:700;">MoHFW Digital Grid</span>
+          </div>
+          <div class="brand-sub" data-i18n="app_subtitle">National Federated Health Resource & Supply Chain Intelligence Grid</div>
+        </div>
+      </div>
+
+      <div class="header-badges">
+        <div class="pulse-badge">
+          <span class="pulse-dot"></span>
+          <span data-i18n="status_live">National Telemetry: LIVE</span>
+        </div>
+        <div class="compliance-badge" id="geminiActiveBadge" style="background:rgba(16,185,129,0.15); color:#34d399; border-color:rgba(16,185,129,0.4);">
+          <span>✨</span>
+          <span>Google Gemini 2.5 Flash: ACTIVE</span>
+        </div>
+        <div class="compliance-badge">
+          <span>🛡️</span>
+          <span data-i18n="status_abdm">ABDM & DISHA Compliant</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Persistent Back Button (visible when away from overview) -->
+        <button id="headerBackBtn" class="btn-header btn-back-header" onclick="window.goBack()" style="display:none;" title="Back to previous page">
+          <span class="back-icon">←</span> <span data-i18n="btn_back_prev">Back</span>
+        </button>
+
+        <!-- Multilingual Language Selector -->
+        <div class="lang-selector-wrapper">
+          <select id="langSelector" onchange="setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="bn">বাংলা (Bengali)</option>
+            <option value="ta">தமிழ் (Tamil)</option>
+            <option value="te">తెలుగు (Telugu)</option>
+            <option value="mr">मराठी (Marathi)</option>
+          </select>
+        </div>
+
+        <!-- Simulator Modal Trigger -->
+        <button class="btn-header btn-emergency-trigger" onclick="openSimulatorModal()">
+          <span>⚠️</span> <span data-i18n="btn_simulate_outbreak">Simulate Outbreak</span>
+        </button>
+
+        <!-- Google AI Settings -->
+        <button class="btn-header" onclick="openSettingsModal()">
+          <span>⚙️</span> <span data-i18n="btn_settings">Google AI Settings</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ACTIVE EPIDEMIOLOGICAL EMERGENCY BANNER -->
+  <div id="emergencyBanner" class="emergency-banner" style="display: none;">
+    <!-- Rendered dynamically by app.js -->
+  </div>
+
+  <!-- MAIN DASHBOARD WRAPPER -->
+  <main class="main-wrapper">
+
+    <!-- KPI STATS CARDS GRID -->
+    <section class="kpi-grid">
+      <!-- PHC Network -->
+      <div class="kpi-card kpi-blue">
+        <div class="kpi-header">
+          <span class="kpi-title" data-i18n="kpi_phcs">PHC Network Monitored</span>
+          <span class="kpi-icon">🏥</span>
+        </div>
+        <div class="kpi-value" id="kpiPhcCount">38 Nodes</div>
+        <div class="kpi-sub">
+          <span>Representing 13,919 National PHCs across 8 States</span>
+        </div>
+      </div>
+
+      <!-- Bed Occupancy -->
+      <div class="kpi-card kpi-amber">
+        <div class="kpi-header">
+          <span class="kpi-title" data-i18n="kpi_beds">Total Bed Occupancy</span>
+          <span class="kpi-icon">🛏️</span>
+        </div>
+        <div class="kpi-value" id="kpiBedRate">73.4%</div>
+        <div class="kpi-sub" id="kpiBedSub">810 of 3,040 beds free</div>
+      </div>
+
+      <!-- Medical Staff Attendance -->
+      <div class="kpi-card kpi-green">
+        <div class="kpi-header">
+          <span class="kpi-title" data-i18n="kpi_staff">Staff on Duty</span>
+          <span class="kpi-icon">🩺</span>
+        </div>
+        <div class="kpi-value" id="kpiStaffRate">94.8%</div>
+        <div class="kpi-sub positive" id="kpiStaffSub">Active MOs, Nurses, ANMs</div>
+      </div>
+
+      <!-- Critical Stockouts -->
+      <div class="kpi-card kpi-red">
+        <div class="kpi-header">
+          <span class="kpi-title" data-i18n="kpi_critical">Critical Stock Shortages</span>
+          <span class="kpi-icon">🚨</span>
+        </div>
+        <div class="kpi-value" id="kpiCriticalShortages" style="color:#f87171;">3</div>
+        <div class="kpi-sub danger">Runway &lt; 3 days &bull; Auto-Rebalance active</div>
+      </div>
+
+      <!-- Oxygen Beds -->
+      <div class="kpi-card kpi-cyan">
+        <div class="kpi-header">
+          <span class="kpi-title" data-i18n="kpi_oxygen">Oxygen Supported Beds</span>
+          <span class="kpi-icon">💨</span>
+        </div>
+        <div class="kpi-value" id="kpiO2Avail">148 Available</div>
+        <div class="kpi-sub">Critical life support buffer</div>
+      </div>
+
+      <!-- ICU Ventilators -->
+      <div class="kpi-card kpi-purple">
+        <div class="kpi-header">
+          <span class="kpi-title" data-i18n="kpi_icu">ICU Ventilators</span>
+          <span class="kpi-icon">⚡</span>
+        </div>
+        <div class="kpi-value" id="kpiIcuAvail">38 Available</div>
+        <div class="kpi-sub">Equipped with central telemetry</div>
+      </div>
+    </section>
+
+    <!-- NAVIGATION TABS -->
+    <nav class="nav-tabs-container">
+      <button class="nav-tab-btn active" data-tab="tab-overview">
+        <span>🗺️</span> <span data-i18n="nav_overview">National Grid Overview</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="tab-forecasting">
+        <span>📈</span> <span data-i18n="nav_forecasting">Demand Forecasting & Warnings</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="tab-redistribution">
+        <span>🚚</span> <span data-i18n="nav_redistribution">Cross-District Redistribution</span>
+        <span class="nav-tab-badge" id="tabRedistributionBadge">3</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="tab-federated">
+        <span>🧠</span> <span data-i18n="nav_federated">Federated Learning Grid</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="tab-copilot">
+        <span>💬</span> <span data-i18n="nav_copilot">Sanjeevani AI Copilot</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="tab-stock-entry">
+        <span>📷</span> <span data-i18n="nav_stock_entry">Frontline Voice & Vision Entry</span>
+      </button>
+    </nav>
+
+    <!-- ==================== TAB 1: OVERVIEW & MAP ==================== -->
+    <div id="tab-overview" class="tab-content active">
+      <!-- Active Route & Corridor Return Banner (visible when viewing a route on map) -->
+      <div id="activeRouteBanner" class="active-route-banner" style="display:none;">
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <span class="pulse-dot"></span>
+          <span id="activeRouteText" style="font-weight:700; color:var(--med-blue-dark); font-size:13px;"></span>
+        </div>
+        <button class="btn-medical-back" onclick="window.backFromRoute()" style="padding:0.35rem 0.85rem; font-size:12px;">
+          <span class="back-icon">←</span> Back to Redistribution Engine
+        </button>
+      </div>
+
+      <div class="map-view-layout">
+        <!-- Interactive Leaflet Map Card -->
+        <div class="map-card">
+          <div class="map-toolbar">
+            <div class="map-filters">
+              <select id="filterStateSelect" class="filter-select">
+                <option value="ALL">All India (36 States & UTs)</option>
+              </select>
+
+              <select id="filterTypeSelect" class="filter-select">
+                <option value="ALL">All Facility Tiers</option>
+                <option value="PHC">Primary Health Centres (PHC)</option>
+                <option value="CHC">Community Health Centres (CHC)</option>
+                <option value="DH">District Hospitals & Depots (DH)</option>
+              </select>
+            </div>
+
+            <input type="text" id="facilitySearchInput" class="search-input" placeholder="Search PHC by name, district, or PIN code..." data-i18n="search_placeholder">
+          </div>
+
+          <div id="nationalMap"></div>
+        </div>
+
+        <!-- Facility List Sidebar -->
+        <div class="facility-sidebar-card">
+          <div class="sidebar-header">
+            <span class="sidebar-title">Monitored Health Centres</span>
+            <span style="font-size:11px; color:#0284c7; font-weight:700;">Click to Inspect</span>
+          </div>
+          <div id="facilitySidebarList" class="facility-list-scroll">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation Bar for Overview -->
+      <div class="page-bottom-back-bar">
+        <div style="font-size:12px; color:var(--text-muted); font-weight:600;">
+          National Primary Health Centre Network Telemetry &bull; Real-Time Inventory & Bed Capacity Monitoring
+        </div>
+        <div style="display:flex; gap:0.6rem;">
+          <button class="btn-header" onclick="window.resetMapFilters()">
+            🔄 Reset Filters
+          </button>
+          <button class="btn-header btn-primary" onclick="window.switchTab('tab-forecasting')">
+            Forecast Demand & Warnings &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 2: DEMAND FORECASTING ==================== -->
+    <div id="tab-forecasting" class="tab-content">
+      <!-- Breadcrumb Bar with Medical Back Button -->
+      <div class="medical-breadcrumb-bar">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="btn-medical-back" onclick="window.goBack()">
+            <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+          </button>
+          <div class="breadcrumb-trail">
+            <span>🏥 National Grid</span>
+            <span>›</span>
+            <span class="current-page-crumb" data-i18n="nav_forecasting">Demand Forecasting & Warnings</span>
+          </div>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); font-weight:600;">
+          Clinical Epidemiology Predictive Model &bull; Google AI Kernel
+        </div>
+      </div>
+
+      <div class="forecasting-container">
+        <!-- Controls Card -->
+        <div class="forecast-controls-card">
+          <div class="forecast-selectors">
+            <div class="form-group" style="min-width: 260px;">
+              <label class="form-label">Select Primary Health Centre / Hospital:</label>
+              <select id="forecastFacilitySelect" class="form-control"></select>
+            </div>
+
+            <div class="form-group" style="min-width: 280px;">
+              <label class="form-label">Select Essential Medicine / Supply:</label>
+              <select id="forecastMedicineSelect" class="form-control"></select>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span style="font-size:12px; color:var(--text-muted); font-weight:600;">Prediction Horizon:</span>
+            <button class="btn-header horizon-pill" data-days="7">7 Days</button>
+            <button class="btn-header horizon-pill active" data-days="14">14 Days</button>
+            <button class="btn-header horizon-pill" data-days="30">30 Days</button>
+          </div>
+        </div>
+
+        <!-- Forecasting Chart & Stats -->
+        <div class="forecast-grid">
+          <div class="chart-card">
+            <div class="chart-header">
+              <div>
+                <span class="chart-title">AI Projected Consumption & Stock Depletion Trajectory</span>
+                <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">
+                  Epidemiological Trend + Day-of-Week Spikes + Seasonal Monsoon/Disease Weighting
+                </div>
+              </div>
+              <span class="chart-badge">Google AI Epidemiological Kernel</span>
+            </div>
+            <div class="chart-canvas-wrapper">
+              <canvas id="forecastChartCanvas"></canvas>
+            </div>
+          </div>
+
+          <!-- Risk Alert Details -->
+          <div class="forecast-stats-card">
+            <h3 style="font-size:14px; font-weight:800; color:var(--text-main); text-transform:uppercase;">
+              Early Warning & Procurement Advisory
+            </h3>
+            
+            <div id="forecastRiskAlertBox" class="risk-alert-box optimal">
+              <!-- Rendered by app.js -->
+            </div>
+
+            <div style="background:#f8fafc; border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1rem; font-size:12px;">
+              <div style="font-weight:700; color:var(--med-blue); margin-bottom:6px;">Autonomous Action Trigger</div>
+              <p style="color:var(--text-muted); line-height:1.4; margin-bottom:10px;">
+                When runway drops below 3 days, the system automatically scans district hubs for surplus donor facilities and queues a zero-delay transfer order.
+              </p>
+              <button class="btn-header btn-primary" style="width:100%; justify-content:center;" onclick="window.switchTab('tab-redistribution')">
+                Check Redistribution Routes &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Back & Forward Navigation Bar -->
+        <div class="page-bottom-back-bar">
+          <button class="btn-medical-back" onclick="window.goBack()">
+            <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+          </button>
+          <div style="display:flex; gap:0.6rem;">
+            <button class="btn-header" onclick="window.switchTab('tab-overview')">
+              🗺️ Map View
+            </button>
+            <button class="btn-header btn-primary" onclick="window.switchTab('tab-redistribution')">
+              Cross-District Redistribution &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 3: CROSS-DISTRICT REDISTRIBUTION ==================== -->
+    <div id="tab-redistribution" class="tab-content">
+      <!-- Breadcrumb Bar with Medical Back Button -->
+      <div class="medical-breadcrumb-bar">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="btn-medical-back" onclick="window.goBack()">
+            <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+          </button>
+          <div class="breadcrumb-trail">
+            <span>🏥 National Grid</span>
+            <span>›</span>
+            <span class="current-page-crumb" data-i18n="nav_redistribution">Cross-District Redistribution</span>
+          </div>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); font-weight:600;">
+          Autonomous Inter-Facility Cold-Chain Dispatch Engine
+        </div>
+      </div>
+
+      <div class="redistribution-container">
+        <!-- Rebalance Header -->
+        <div class="rebalance-header-card">
+          <div class="rebalance-title-group">
+            <h2>Automated Cross-District Resource Redistribution Engine</h2>
+            <p>
+              Autonomous surplus-to-deficit matching matrix. Considers Haversine road transit distances, cold-chain safety windows (2°C-8°C), and donor safety buffer limits.
+            </p>
+          </div>
+          <div style="display:flex; gap:0.6rem;">
+            <button class="btn-header" onclick="loadRedistributionRecommendations()">
+              🔄 Re-calculate Optimal Matches
+            </button>
+            <button class="btn-header btn-primary" onclick="executeAllDispatches()">
+              ✓ <span data-i18n="btn_execute_all">Approve All Dispatches</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Transfer Cards List -->
+        <div id="redistributionCardsList" class="transfer-cards-list">
+          <!-- Dynamically populated by app.js -->
+        </div>
+
+        <!-- Bottom Back & Forward Navigation Bar -->
+        <div class="page-bottom-back-bar">
+          <button class="btn-medical-back" onclick="window.goBack()">
+            <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+          </button>
+          <div style="display:flex; gap:0.6rem;">
+            <button class="btn-header" onclick="window.switchTab('tab-forecasting')">
+              ← Demand Forecasting
+            </button>
+            <button class="btn-header btn-primary" onclick="window.switchTab('tab-federated')">
+              Federated Learning Grid &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 4: FEDERATED LEARNING GRID ==================== -->
+    <div id="tab-federated" class="tab-content">
+      <!-- Breadcrumb Bar with Medical Back Button -->
+      <div class="medical-breadcrumb-bar">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="btn-medical-back" onclick="window.goBack()">
+            <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+          </button>
+          <div class="breadcrumb-trail">
+            <span>🏥 National Grid</span>
+            <span>›</span>
+            <span class="current-page-crumb" data-i18n="nav_federated">Federated Learning Grid</span>
+          </div>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); font-weight:600;">
+          ABDM / DISHA Compliant &bull; Zero Raw Data Leaves State Edge Nodes
+        </div>
+      </div>
+
+      <div class="federated-container">
+        <!-- Hero Section -->
+        <div class="fed-hero-card">
+          <div class="fed-hero-text">
+            <h2 data-i18n="fed_title">Federated Learning across India's States (FedAvg)</h2>
+            <p data-i18n="fed_desc">
+              State edge nodes train locally on Primary Health Centre telemetry without transmitting citizen health records or PHI to a central cloud server. Differential Privacy (ε=1.25) protects citizen privacy under ABDM/DISHA.
+            </p>
+            <div id="fedLatestInsight" style="margin-top:8px; font-size:12px; color:var(--med-blue); font-weight:600;"></div>
+          </div>
+          <div style="text-align:right;">
+            <button id="btnTriggerFederatedRound" class="btn-header btn-primary" onclick="triggerFederatedRound()" style="padding:0.75rem 1.25rem; font-size:14px;">
+              ⚡ <span data-i18n="btn_run_federated">Run Federated Round</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Multi-step Federated Progress Bar -->
+        <div id="fedRoundProgressContainer" style="display:none; background:#ffffff; border:1px solid var(--border-color); padding:1rem; border-radius:var(--radius-md); box-shadow:var(--shadow-sm);">
+          <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:6px;">
+            <span id="fedRoundProgressText" style="color:var(--med-blue); font-weight:700;">Initiating Cross-State Federated Averaging...</span>
+          </div>
+          <div style="width:100%; height:8px; background:#e2e8f0; border-radius:4px; overflow:hidden;">
+            <div id="fedRoundProgressFill" style="width:0%; height:100%; background:linear-gradient(90deg, #0284c7, #059669); transition:width 0.3s ease;"></div>
+          </div>
+        </div>
+
+        <!-- Federated KPI Row -->
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-green">
+            <div class="kpi-header">
+              <span class="kpi-title" data-i18n="fed_accuracy">Global Model Accuracy</span>
+              <span class="kpi-icon">🎯</span>
+            </div>
+            <div class="kpi-value" id="fedGlobalAccuracy">84.2%</div>
+            <div class="kpi-sub positive" id="fedCurrentRoundNum">Round 2</div>
+          </div>
+
+          <div class="kpi-card kpi-blue">
+            <div class="kpi-header">
+              <span class="kpi-title" data-i18n="fed_loss">Global Test Loss</span>
+              <span class="kpi-icon">📉</span>
+            </div>
+            <div class="kpi-value" id="fedGlobalLoss">0.4087</div>
+            <div class="kpi-sub">Continuous cross-state loss reduction</div>
+          </div>
+
+          <div class="kpi-card kpi-purple">
+            <div class="kpi-header">
+              <span class="kpi-title" data-i18n="fed_records_protected">Protected Citizen Records</span>
+              <span class="kpi-icon">🔒</span>
+            </div>
+            <div class="kpi-value" id="fedRecordsProtected">1.95M</div>
+            <div class="kpi-sub">100% Zero Raw Data Leaves States</div>
+          </div>
+
+          <div class="kpi-card kpi-cyan">
+            <div class="kpi-header">
+              <span class="kpi-title" data-i18n="fed_gradient_size">Gradient Payload</span>
+              <span class="kpi-icon">📦</span>
+            </div>
+            <div class="kpi-value" id="fedGradientPayload">48.6 KB</div>
+            <div class="kpi-sub">Ultra-low rural bandwidth footprint</div>
+          </div>
+        </div>
+
+        <!-- Convergence Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <span class="chart-title">Federated Convergence Progression (Loss vs Accuracy over Rounds)</span>
+            <span class="chart-badge">Differential Privacy ε=1.25</span>
+          </div>
+          <div class="chart-canvas-wrapper" style="min-height:280px;">
+            <canvas id="fedConvergenceChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Participating State Node Edge Grid -->
+        <div>
+          <h3 style="font-size:14px; font-weight:800; color:var(--text-main); margin-bottom:10px; text-transform:uppercase;">
+            Participating State Edge Computing Nodes
+          </h3>
+          <div id="fedStatesGrid" class="fed-states-grid">
+            <!-- Populated by federated.js -->
+          </div>
+        </div>
+
+        <!-- Bottom Back & Forward Navigation Bar -->
+        <div class="page-bottom-back-bar">
+          <button class="btn-medical-back" onclick="window.goBack()">
+            <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+          </button>
+          <div style="display:flex; gap:0.6rem;">
+            <button class="btn-header" onclick="window.switchTab('tab-redistribution')">
+              ← Redistribution Engine
+            </button>
+            <button class="btn-header btn-primary" onclick="window.switchTab('tab-copilot')">
+              Sanjeevani AI Copilot &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 5: SANJEEVANI AI COPILOT ==================== -->
+    <div id="tab-copilot" class="tab-content">
+      <!-- Breadcrumb Bar with Medical Back Button -->
+      <div class="medical-breadcrumb-bar">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="btn-medical-back" onclick="window.goBack()">
+            <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+          </button>
+          <div class="breadcrumb-trail">
+            <span>🏥 National Grid</span>
+            <span>›</span>
+            <span class="current-page-crumb" data-i18n="nav_copilot">Sanjeevani AI Copilot</span>
+          </div>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); font-weight:600;">
+          Powered by Google Gemini 2.5 Flash &bull; Multilingual Clinical Advisory
+        </div>
+      </div>
+
+      <div class="copilot-container">
+        <!-- Sidebar with suggested queries -->
+        <div class="copilot-sidebar">
+          <div class="prompt-suggestions-title">💡 Strategic Health Queries</div>
+          
+          <button class="suggestion-btn" onclick="askPresetQuestion('Summarize critical medicine shortages across Uttar Pradesh and recommend dispatches.')">
+            📋 "Summarize critical medicine shortages in Uttar Pradesh & recommend dispatches."
+          </button>
+
+          <button class="suggestion-btn" onclick="askPresetQuestion('वाराणसी और गोरखपुर में एंटी-स्नेक वेनम का स्टॉक कितना है?')">
+            🐍 "वाराणसी और गोरखपुर में एंटी-स्नेक वेनम का स्टॉक कितना है?"
+          </button>
+
+          <button class="suggestion-btn" onclick="askPresetQuestion('Generate an official MoHFW urgent alert circular for the active Dengue outbreak.')">
+            📢 "Draft an official MoHFW urgent alert circular for the active Dengue outbreak."
+          </button>
+
+          <button class="suggestion-btn" onclick="askPresetQuestion('Explain why Pandit Deen Dayal Upadhyaya Hospital was chosen as donor for PHC Cholapur.')">
+            🚚 "Why was Pandit Deen Dayal Hospital selected to replenish PHC Cholapur?"
+          </button>
+
+          <button class="suggestion-btn" onclick="askPresetQuestion('কেমন আছে আসামের কামরূপ জেলার প্রাথমিক স্বাস্থ্য কেন্দ্রগুলি?')">
+            🇧🇩 "কেমন আছে আসামের কামরূপ জেলার প্রাথমিক স্বাস্থ্য কেন্দ্রগুলি?"
+          </button>
+
+          <div style="margin-top:auto; font-size:11px; color:var(--text-muted); line-height:1.4;">
+            <strong>Multilingual Voice Enabled:</strong> Speak in Hindi, Bengali, Tamil, Telugu, Marathi, or English.
+          </div>
+        </div>
+
+        <!-- Chat Workspace -->
+        <div class="copilot-chat-card">
+          <div class="chat-messages-area" id="chatMessagesArea">
+            <div class="chat-bubble ai-bubble">
+              <h3 style="color:var(--med-blue-dark); margin-bottom:4px;">🏥 Welcome to Sanjeevani AI (संजीवनी एआई)</h3>
+              <p>I am your National Health Supply Chain Intelligence Copilot, grounded in real-time telemetry from 13,900+ Primary Health Centres across India.</p>
+              <p style="margin-top:6px;">Ask me about medicine runways, bed saturation, emergency outbreak containment, or automated cross-district logistics.</p>
+            </div>
+          </div>
+
+          <div class="chat-input-bar">
+            <input type="text" id="chatInputField" class="chat-input-field" placeholder="Ask Sanjeevani AI about stockouts, logistics, or outbreaks...">
+            <button id="btnChatMic" class="btn-mic-pulse" title="Voice Input">
+              🎤
+            </button>
+            <button id="btnSendChat" class="btn-header btn-primary">
+              Send &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Back & Forward Navigation Bar -->
+      <div class="page-bottom-back-bar">
+        <button class="btn-medical-back" onclick="window.goBack()">
+          <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+        </button>
+        <div style="display:flex; gap:0.6rem;">
+          <button class="btn-header" onclick="window.switchTab('tab-federated')">
+            ← Federated Learning
+          </button>
+          <button class="btn-header btn-primary" onclick="window.switchTab('tab-stock-entry')">
+            Voice & Vision Stock Entry &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 6: FRONTLINE VOICE & VISION ENTRY ==================== -->
+    <div id="tab-stock-entry" class="tab-content">
+      <!-- Breadcrumb Bar with Medical Back Button -->
+      <div class="medical-breadcrumb-bar">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="btn-medical-back" onclick="window.goBack()">
+            <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+          </button>
+          <div class="breadcrumb-trail">
+            <span>🏥 National Grid</span>
+            <span>›</span>
+            <span class="current-page-crumb" data-i18n="nav_stock_entry">Frontline Voice & Vision Entry</span>
+          </div>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); font-weight:600;">
+          Rural PHC / ASHA Frontline Data Capture &bull; Vision Ledger OCR
+        </div>
+      </div>
+
+      <div class="stock-entry-grid">
+        <!-- Feature A: Frontline Voice Logger -->
+        <div class="entry-card">
+          <div class="entry-card-header">
+            <h3><span>🎤</span> ArogyaVoice Frontline Logger</h3>
+            <p>Designed for rural ASHA workers, ANMs, and PHC Pharmacists. Speak stock updates naturally in Indian languages.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Designated Health Centre:</label>
+            <select id="voiceFacilitySelect" class="form-control"></select>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1.5rem; background:#f8fafc; border:1px dashed var(--border-color); border-radius:var(--radius-md); gap:0.75rem;">
+            <button id="btnVoiceStockMic" class="btn-mic-pulse" style="width:60px; height:60px; font-size:24px;">
+              🎤
+            </button>
+            <span style="font-size:12px; color:var(--med-blue-dark); font-weight:700;">Tap to Speak Stock Entry</span>
+            <div style="font-size:11px; color:var(--text-muted); text-align:center;">
+              Example: <em>"Received 500 Paracetamol tablets and 20 Anti snake venom vials"</em> or <em>"२०० ओआरएस पैकेट प्राप्त हुए"</em>
+            </div>
+          </div>
+
+          <div id="voiceStockParsedPreview" style="background:#f8fafc; border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1rem; min-height:80px; font-size:12px;">
+            <span style="color:var(--text-muted);">Spoken stock recognition will appear here...</span>
+          </div>
+        </div>
+
+        <!-- Feature B: Computer Vision & Handwritten Register OCR -->
+        <div class="entry-card">
+          <div class="entry-card-header">
+            <h3><span>📷</span> Google Gemini Vision Register & Strip OCR</h3>
+            <p>Digitize handwritten physical stock register ledgers and medicine blister strips instantly.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Receiving Primary Health Centre:</label>
+            <select id="ocrFacilitySelect" class="form-control"></select>
+          </div>
+
+          <div class="sample-images-bar">
+            <span style="font-size:11px; color:var(--text-muted); font-weight:700;">Sample Assets:</span>
+            <button class="btn-sample-img" onclick="loadSampleOcrImage('REGISTER')">1. Handwritten Register</button>
+            <button class="btn-sample-img" onclick="loadSampleOcrImage('PARACETAMOL')">2. Paracetamol Foil</button>
+            <button class="btn-sample-img" onclick="loadSampleOcrImage('ASV')">3. Anti-Snake Venom Box</button>
+          </div>
+
+          <!-- Drop / Click Zone -->
+          <div id="ocrDropZone" class="ocr-drop-zone">
+            <input type="file" id="ocrFileInput" accept="image/*" style="display:none;">
+            <div style="font-size:28px; margin-bottom:6px;">📸</div>
+            <div style="font-size:13px; font-weight:700; color:var(--text-main);">Click or Drag & Drop Photo Here</div>
+            <div style="font-size:11px; color:var(--text-muted);">Accepts JPG, PNG photos of blister packs or physical ledgers</div>
+          </div>
+
+          <!-- Image Preview -->
+          <div id="ocrPreviewContainer" class="ocr-preview-container">
+            <!-- Dynamically populated -->
+          </div>
+
+          <button id="btnRunOcr" class="btn-header btn-primary" onclick="runVisionOcrScan()" style="justify-content:center; padding:0.75rem;">
+            🔍 <span data-i18n="btn_scan_register">Analyze with Gemini Vision OCR</span>
+          </button>
+
+          <!-- Structured Parsed Output -->
+          <div id="ocrResultsBox" class="ocr-results-box">
+            <span style="color:var(--text-muted);">Awaiting vision scan analysis...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Back & Forward Navigation Bar -->
+      <div class="page-bottom-back-bar">
+        <button class="btn-medical-back" onclick="window.goBack()">
+          <span class="back-icon">←</span> <span data-i18n="btn_back_overview">Back to National Grid Overview</span>
+        </button>
+        <div style="display:flex; gap:0.6rem;">
+          <button class="btn-header" onclick="window.switchTab('tab-copilot')">
+            ← AI Copilot
+          </button>
+          <button class="btn-header btn-primary" onclick="window.switchTab('tab-overview')">
+            Return to National Map &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Persistent Floating Quick-Back Button (Always accessible) -->
+  <button id="floatingBackFab" class="floating-back-fab" onclick="window.goBack()" title="Back to Previous Page / Overview">
+    <span class="back-icon">←</span> <span data-i18n="btn_back_prev">Back</span>
+  </button>
+
+  <!-- ==================== MODAL: FACILITY DETAILS ==================== -->
+  <div id="facilityDetailModal" class="modal-overlay">
+    <div class="modal-dialog" style="max-width: 820px;">
+      <div class="modal-header" style="display:flex; align-items:center; justify-content:space-between; gap:0.75rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="btn-medical-back" onclick="closeModal('facilityDetailModal')" style="padding:0.35rem 0.85rem; font-size:12px;">
+            <span class="back-icon">←</span> Back to Map
+          </button>
+          <span class="modal-title" id="modalFacName">PHC Telemetry Profile</span>
+        </div>
+        <button onclick="closeModal('facilityDetailModal')" style="background:none; border:none; color:var(--text-muted); font-size:24px; cursor:pointer;" title="Close">&times;</button>
+      </div>
+      <div class="modal-body" id="modalFacBody">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="modal-footer" style="display:flex; justify-content:space-between; align-items:center;">
+        <button class="btn-medical-back" onclick="closeModal('facilityDetailModal')">
+          <span class="back-icon">←</span> Back to Facilities Map
+        </button>
+        <button class="btn-header" onclick="closeModal('facilityDetailModal')">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: OFFICIAL DISPATCH GATE PASS MANIFEST ==================== -->
+  <div id="manifestModal" class="modal-overlay">
+    <div class="modal-dialog" style="max-width: 840px;">
+      <div class="modal-header" style="display:flex; align-items:center; justify-content:space-between; gap:0.75rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="btn-medical-back" onclick="closeModal('manifestModal')" style="padding:0.35rem 0.85rem; font-size:12px;">
+            <span class="back-icon">←</span> Back to Redistribution Engine
+          </button>
+          <span class="modal-title">📄 Digital Dispatch Gate Pass Manifest</span>
+        </div>
+        <button onclick="closeModal('manifestModal')" style="background:none; border:none; color:var(--text-muted); font-size:24px; cursor:pointer;" title="Close">&times;</button>
+      </div>
+      <div class="modal-body" id="manifestModalBody">
+        <!-- Populated dynamically by app.js -->
+      </div>
+      <div class="modal-footer" style="display:flex; justify-content:space-between; align-items:center;">
+        <button class="btn-medical-back" onclick="closeModal('manifestModal')">
+          <span class="back-icon">←</span> Back to Redistribution Engine
+        </button>
+        <div style="display:flex; gap:0.5rem;">
+          <button class="btn-header" onclick="window.printManifest()">🖨️ Print Manifest</button>
+          <button class="btn-header btn-primary" onclick="closeModal('manifestModal')">Done / Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: OUTBREAK SIMULATOR ==================== -->
+  <div id="simulatorModal" class="modal-overlay">
+    <div class="modal-dialog">
+      <div class="modal-header" style="display:flex; align-items:center; justify-content:space-between; gap:0.75rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="btn-medical-back" onclick="closeModal('simulatorModal')" style="padding:0.35rem 0.85rem; font-size:12px;">
+            <span class="back-icon">←</span> Back
+          </button>
+          <span class="modal-title">⚠️ Public Health Outbreak Simulation Suite</span>
+        </div>
+        <button onclick="closeModal('simulatorModal')" style="background:none; border:none; color:var(--text-muted); font-size:24px; cursor:pointer;" title="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:13px; color:var(--text-muted);">
+          Test the national platform's real-time early warning alarms, consumption acceleration, and automated cross-district resource rebalancing under emergency stress conditions:
+        </p>
+
+        <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:0.5rem;">
+          <button class="btn-header btn-emergency-trigger" onclick="triggerOutbreak('DENGUE_SPIKE', 'KL'); closeModal('simulatorModal');" style="justify-content:space-between; padding:0.75rem 1rem;">
+            <div style="text-align:left;">
+              <strong style="color:var(--text-main);">1. Dengue & Thrombocytopenia Spike (Kerala)</strong>
+              <div style="font-size:11px; color:#dc2626;">Accelerates NS1 antigen kits, Paracetamol, PRBC blood & IV fluids demand 4x</div>
+            </div>
+            <span>Trigger &rarr;</span>
+          </button>
+
+          <button class="btn-header btn-emergency-trigger" onclick="triggerOutbreak('MONSOON_FLOOD_GASTRO', 'AS'); closeModal('simulatorModal');" style="justify-content:space-between; padding:0.75rem 1rem;">
+            <div style="text-align:left;">
+              <strong style="color:var(--text-main);">2. Monsoon Riverine Flood Gastro Surge (Assam)</strong>
+              <div style="font-size:11px; color:#dc2626;">Severe acute waterborne diarrhea outbreak; drains ORS, Zinc & DNS IV bags 5x</div>
+            </div>
+            <span>Trigger &rarr;</span>
+          </button>
+
+          <button class="btn-header btn-emergency-trigger" onclick="triggerOutbreak('SNAKEBITE_CLUSTER', 'UP'); closeModal('simulatorModal');" style="justify-content:space-between; padding:0.75rem 1rem;">
+            <div style="text-align:left;">
+              <strong style="color:var(--text-main);">3. Agricultural Harvest Snakebite Spike (Uttar Pradesh)</strong>
+              <div style="font-size:11px; color:#dc2626;">Exhausts Anti-Snake Venom (ASV) and saturates rural ICU ventilator beds</div>
+            </div>
+            <span>Trigger &rarr;</span>
+          </button>
+
+          <button class="btn-header" onclick="resetOutbreakSimulation(); closeModal('simulatorModal');" style="justify-content:center; padding:0.75rem; margin-top:0.5rem;">
+            🔄 <span data-i18n="btn_reset_baseline">Reset to Normal Operational Baseline</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer" style="display:flex; justify-content:flex-start;">
+        <button class="btn-medical-back" onclick="closeModal('simulatorModal')">
+          <span class="back-icon">←</span> Back
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: GOOGLE AI SETTINGS ==================== -->
+  <div id="settingsModal" class="modal-overlay">
+    <div class="modal-dialog">
+      <div class="modal-header" style="display:flex; align-items:center; justify-content:space-between; gap:0.75rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="btn-medical-back" onclick="closeModal('settingsModal')" style="padding:0.35rem 0.85rem; font-size:12px;">
+            <span class="back-icon">←</span> Back
+          </button>
+          <span class="modal-title">⚙️ Google AI (Gemini) Integration Settings</span>
+        </div>
+        <button onclick="closeModal('settingsModal')" style="background:none; border:none; color:var(--text-muted); font-size:24px; cursor:pointer;" title="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:13px; color:var(--text-muted);">
+          Enter your <strong>Google Gemini API Key</strong> to connect live to Gemini 2.5 Flash for the Sanjeevani AI Copilot and Computer Vision OCR Scanner.
+        </p>
+
+        <div class="form-group" style="margin-top:0.5rem;">
+          <label class="form-label">Gemini API Key (optional):</label>
+          <input type="password" id="geminiApiKeyInput" class="form-control" placeholder="AIzaSy...">
+        </div>
+
+        <div style="background:rgba(5,150,105,0.08); border:1px solid rgba(5,150,105,0.25); border-radius:var(--radius-sm); padding:0.75rem; font-size:12px; color:var(--med-green);">
+          <strong>✓ Intelligent Fallback Engine Active:</strong> If left empty, ArogyaPulse AI seamlessly runs its high-fidelity local Google AI kernel, providing 100% offline functionality.
+        </div>
+      </div>
+      <div class="modal-footer" style="display:flex; justify-content:space-between; align-items:center;">
+        <button class="btn-medical-back" onclick="closeModal('settingsModal')">
+          <span class="back-icon">←</span> Back
+        </button>
+        <button class="btn-header btn-primary" onclick="saveSettings()">Save Configuration</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT APP MODULES -->
+  <script src="/js/translations.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/map.js"></script>
+  <script src="/js/voice.js"></script>
+  <script src="/js/camera_ocr.js"></script>
+  <script src="/js/federated.js"></script>
+  <script src="/js/app.js"></script>
+
+  <script>
+    function openSimulatorModal() {
+      const m = document.getElementById("simulatorModal");
+      if (m) m.classList.add("active");
+    }
+  </script>
+</body>
+</html>
