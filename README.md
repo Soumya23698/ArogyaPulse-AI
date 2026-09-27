@@ -1,4 +1,10 @@
 # 🏥 ArogyaPulse AI (आरोग्य पल्स)
+
+> 🌐 **24/7 Live Web Access**: [https://soumya23698.github.io/ArogyaPulse-AI/](https://soumya23698.github.io/ArogyaPulse-AI/)
+> *(Accessible anytime from any smartphone, tablet, or PC worldwide)*
+
+---
+
 ### National Federated Health Resource & Supply Chain Intelligence Grid
 *A National-Scale Federated AI Platform for Real-Time Visibility, Demand Forecasting, Automated Cross-District Redistribution, and Edge Collaborative Modeling across India's Primary Health Centres (PHCs).*
 
